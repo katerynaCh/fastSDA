@@ -1,6 +1,6 @@
 # Fast Subclass Discriminant Analysis
 
-This repository provides the codes for the paper "Speed-up and Multi-view extensions to Subclass Discriminant Analysis", preprint available here.
+This repository provides the codes for the paper "Speed-up and Multi-view extensions to Subclass Discriminant Analysis", preprint available [here].
 
 For single-view fastSDA the following 
 * *calculate_targets_singleview.m* - calculates target vector matrix T given class and subclass labels
