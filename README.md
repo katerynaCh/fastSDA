@@ -12,7 +12,7 @@ The same logic is followed for multi-view case:
 * *get_fastSDA_multiview_kernel_results.m* 	
 * *get_fastSDA_multiview_linear_results.m*
 ### 
-If you find this repository useful, please cite it as:
+If you find our work useful, please cite it as:
 ```
 @article{chumachenko2019speed,
   title={Speed-up and multi-view extensions to Subclass Discriminant Analysis},
