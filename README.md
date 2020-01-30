@@ -2,7 +2,7 @@
 
 This repository provides the codes for the paper "Speed-up and Multi-view extensions to Subclass Discriminant Analysis", preprint available [here].
 
-For single-view fastSDA the following 
+For single-view fastSDA the following files are used:
 * *calculate_targets_singleview.m* - calculates target vector matrix T given class and subclass labels
 * *get_fastSDA_kernel_results.m* - applies kernel fastSDA given data matrix X and labels. Note that X should be sorted according to classes/subclasses	
 * *get_fastSDA_linear_results.m* 	- applies linear fastSDA given the kernel matrix K and labels. Note that data should be sorted according to classes/subclasses
