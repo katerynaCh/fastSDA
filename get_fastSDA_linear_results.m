@@ -34,7 +34,7 @@ else
     T = calculate_targets_singleview(y_train, clst_class_lbls', clst_lbls);
     dd = X_train_sorted*X_train_sorted';
     [R,p] = chol(ss);
-    W = X_train_sorted*R\(R'\(T'));
+    W = X_train_sorted*(R\(R'\(T')));
 end
 
 tmpNorm = sqrt(diag(W'*W));
