@@ -14,11 +14,13 @@ The same logic is followed for multi-view case:
 ### 
 If you find our work useful, please cite it as:
 ```
-@article{chumachenko2019speed,
-  title={Speed-up and multi-view extensions to Subclass Discriminant Analysis},
+@article{chumachenko2020speed,
+  title={Speed-up and multi-view extensions to subclass discriminant analysis},
   author={Chumachenko, Kateryna and Raitoharju, Jenni and Iosifidis, Alexandros and Gabbouj, Moncef},
-  journal={arXiv preprint arXiv:1905.00794},
-  year={2019}
+  journal={Pattern Recognition},
+  pages={107660},
+  year={2020},
+  publisher={Elsevier}
 }
 ```
 [here]: <https://arxiv.org/abs/1905.00794>
