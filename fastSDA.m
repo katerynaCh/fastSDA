@@ -1,8 +1,8 @@
 function W = fastSDA(X_train, y_train, dim, alpha)
-% X_train_sorted = train data, MEAN-CENTERED, NxD
+% X_train_sorted = train data, NxD
 % y_train = train labels, Nx1
 % dims = number of dimensions to keep 
-% alpha = regularization parameter (0.001, 0.01, 0.1, 10 etc)
+% alpha = regularization parameter (0.001, 0.01, 0.1, 1, 10, 100, 1000 etc - the best is to select on validation set)
 C = length(unique(y_train));
 n_clusters = ceil((dim+1) / C);
 
@@ -10,7 +10,11 @@ n_clusters = ceil((dim+1) / C);
 [y_train, sortIndex] = sort(y_train); 
 X_train = X_train(sortIndex,:);
 
-% X_train_sorted = zeros(size(X_train));
+%mean-center
+sampleMean = mean(X_train);
+X_train = (X_train - repmat(sampleMean,size(X_train,1),1));
+
+X_train_sorted = zeros(size(X_train));
 clst_lbls = ones(size(y_train));
 clst_class_lbls = n_clusters * ones(1,C);
 idx = 1;
@@ -31,8 +35,7 @@ for i=1:C
 end
 
 clear X_train;
-%sampleMean = mean(X_train);
-%X_train = (X_train - repmat(sampleMean,size(X_train,1),1));
+
 
 X_train_sorted = X_train_sorted';
 
@@ -58,4 +61,7 @@ else
     %W = pinv(X_train_sorted*X_train_sorted')*X_train_sorted*T';
 end
 
+W = W(:,1:dim);
+
+%orthogonalize projection matrix
 W = orth(W);
